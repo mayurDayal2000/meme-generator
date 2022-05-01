@@ -1,0 +1,124 @@
+header {
+  width: 100%;
+  height: 100%;
+  padding: 1.25rem;
+
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .main-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+  }
+
+  h1 {
+    font-family: "Karla";
+    font-weight: 700;
+    font-size: clamp(1rem, 2.6vw, 1.75rem);
+    color: #fff;
+    letter-spacing: -0.1em;
+  }
+
+  h3 {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: clamp(0.625rem, 2vw, 1.125rem);
+    color: #ffffff;
+  }
+}
+
+main {
+  width: 80%;
+  max-width: 700px;
+  margin: 2.25rem auto;
+
+  form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1.125rem;
+    row-gap: 0.9375rem;
+
+    @media screen and (min-width: 700px) {
+      margin: 7vw auto;
+      row-gap: 3vw;
+    }
+
+    input[type="text"] {
+      flex-basis: calc(50% - 0.5625rem);
+      height: 100%;
+      border: 1px solid #d5d4d8;
+
+      border-radius: 0.3125rem;
+
+      font-family: "Karla";
+      font-weight: 400;
+      font-size: clamp(0.625rem, 2vw, 1rem);
+      color: #0d0d0d;
+
+      padding-block: 0.625rem;
+      text-indent: 0.75rem;
+
+      &:focus {
+        outline: 1px solid #222;
+      }
+    }
+
+    button {
+      flex-basis: 100%;
+      border: none;
+      outline: none;
+      background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+      border-radius: 0.3125rem;
+
+      font-family: "Karla";
+      font-weight: 700;
+      font-size: clamp(0.75rem, 2vw, 1rem);
+      letter-spacing: -0.1em;
+      color: #fff;
+
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+  }
+
+  .meme-display {
+    margin: 2.25rem 0;
+    position: relative;
+
+    .meme-img {
+      width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-weight: 400;
+      font-size: clamp(1rem, 2.5vw, 2rem);
+      color: #fff;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+        -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000,
+        -2px 0 0 #000, 2px 2px 5px #000;
+
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      left: 50%;
+    }
+
+    .top-content-text {
+      top: 0;
+      transform: translate(-50%, 150%);
+    }
+
+    .btm-content-text {
+      bottom: 0;
+      transform: translate(-50%, -150%);
+    }
+  }
+}

@@ -1,9 +1,16 @@
 import React from "react";
+import Header from "./components/Header";
+import Meme from "./components/Meme";
 import "./css/main.css";
 import "./css/app.scss";
 
 const App = function () {
-  return <h1>App is working!</h1>;
+  return (
+    <>
+      <Header />
+      <Meme />
+    </>
+  );
 };
 
 export default App;
